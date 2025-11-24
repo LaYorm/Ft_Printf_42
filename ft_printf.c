@@ -6,7 +6,7 @@
 /*   By: yorimek <yorimek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 10:41:39 by yorimek           #+#    #+#             */
-/*   Updated: 2025/11/20 16:19:18 by yorimek          ###   ########.fr       */
+/*   Updated: 2025/11/24 12:48:28 by yorimek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,5 +92,6 @@ int	ft_printf(const char *str, ...)
 			len_tot = ft_putchar_count(str[i], len_tot);
 		i++;
 	}
+	va_end(args);
 	return (len_tot);
 }

@@ -12,7 +12,7 @@ all : $(NAME)
 $(NAME) : $(OBJ)
 			ar rcs $(NAME) $(OBJ)
 
-%.o : %.c ftprintf.h
+%.o : %.c ft_printf.h
 			$(CC) ${CFLAGS} -c $< -o $@
 
 clean :
