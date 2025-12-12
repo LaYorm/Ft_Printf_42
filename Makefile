@@ -1,4 +1,4 @@
-NAME = libftprintf.a
+NAME = ft_printf_objects
 CC = cc 
 CFLAGS = -Wall -Wextra -Werror
 
@@ -7,10 +7,10 @@ SRC = ft_printf.c ft_puthexa_lower.c ft_puthexa_upper.c ft_put_adress.c\
 
 OBJ = ${SRC:.c=.o}
 
-all : $(NAME)
+all : $(OBJ)
 
 $(NAME) : $(OBJ)
-			ar rcs $(NAME) $(OBJ)
+			@echo "ft_printf objects compiled in sub_folder."
 
 %.o : %.c ft_printf.h
 			$(CC) ${CFLAGS} -c $< -o $@
@@ -19,8 +19,7 @@ clean :
 			rm -f $(OBJ)
 
 fclean : clean
-			rm -f $(NAME)
 
 re : fclean all
 
-.PHONY : clean fclean re
+.PHONY : all clean fclean re

@@ -6,7 +6,7 @@
 /*   By: yorimek <yorimek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 10:41:39 by yorimek           #+#    #+#             */
-/*   Updated: 2025/11/24 12:48:28 by yorimek          ###   ########.fr       */
+/*   Updated: 2025/11/24 15:26:06 by yorimek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,4 +94,10 @@ int	ft_printf(const char *str, ...)
 	}
 	va_end(args);
 	return (len_tot);
+}
+
+int main()
+{
+	printf("%%c\n");
+	ft_printf("%%c\n");
 }
